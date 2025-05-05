@@ -77,7 +77,7 @@ export default function Orders({ user }) {
                                 {review ? (
                                     <div className="mt-3 p-3 bg-gray-50 rounded">
                                         <p className="text-sm font-medium">Your Review</p>
-                                        <StarRating rating={review.rating} readOnly />
+                                        <StarRating rating={review.rating} readOnly = {true} />
                                         {review.comment && <p className="text-sm mt-1">{review.comment}</p>}
                                     </div>
                                 ) : (
