@@ -8,7 +8,7 @@ const StarRating = ({ rating, setRating, readOnly = false }) => {
       {stars.map((star) => (
         <span
           key={star}
-          onClick={() => setRating && setRating(star)}
+          onClick={() => !readOnly && setRating && setRating(star)}
           className={`text-xl cursor-${readOnly ? "default" : "pointer"} ${
             star <= rating ? "text-yellow-400" : "text-gray-300"
           }`}
